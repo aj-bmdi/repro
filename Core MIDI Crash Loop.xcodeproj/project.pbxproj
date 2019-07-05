@@ -13,12 +13,9 @@
 		EE43768F22C9FF24007BE759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE43768E22C9FF24007BE759 /* Assets.xcassets */; };
 		EE43769222C9FF24007BE759 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE43769022C9FF24007BE759 /* LaunchScreen.storyboard */; };
 		EE43769B22C9FFDA007BE759 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE43769A22C9FFDA007BE759 /* CoreMIDI.framework */; };
-		EE76B21222CA415F0079D3FE /* PGMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = EE76B21022CA415F0079D3FE /* PGMidi.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EE26783522CC9AEA000A4810 /* Core-MIDI-Crash-Loop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Core-MIDI-Crash-Loop-Bridging-Header.h"; sourceTree = "<group>"; };
-		EE406C2E22CA582C00745708 /* PGArc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGArc.h; sourceTree = "<group>"; };
 		EE43768422C9FF24007BE759 /* Core MIDI Crash Loop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core MIDI Crash Loop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE43768722C9FF24007BE759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE43768922C9FF24007BE759 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,9 +24,6 @@
 		EE43769122C9FF24007BE759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE43769322C9FF24007BE759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE43769A22C9FFDA007BE759 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
-		EE76B20E22CA3ADD0079D3FE /* Core MIDI Crash Loop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Core MIDI Crash Loop.entitlements"; sourceTree = "<group>"; };
-		EE76B21022CA415F0079D3FE /* PGMidi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PGMidi.mm; sourceTree = "<group>"; };
-		EE76B21122CA415F0079D3FE /* PGMidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMidi.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,15 +58,12 @@
 		EE43768622C9FF24007BE759 /* Core MIDI Crash Loop */ = {
 			isa = PBXGroup;
 			children = (
-				EE76B20E22CA3ADD0079D3FE /* Core MIDI Crash Loop.entitlements */,
 				EE43768722C9FF24007BE759 /* AppDelegate.swift */,
 				EE43768922C9FF24007BE759 /* ViewController.swift */,
 				EE43768B22C9FF24007BE759 /* Main.storyboard */,
 				EE43768E22C9FF24007BE759 /* Assets.xcassets */,
 				EE43769022C9FF24007BE759 /* LaunchScreen.storyboard */,
 				EE43769322C9FF24007BE759 /* Info.plist */,
-				EE76B20F22CA415F0079D3FE /* PGMidi */,
-				EE26783522CC9AEA000A4810 /* Core-MIDI-Crash-Loop-Bridging-Header.h */,
 			);
 			path = "Core MIDI Crash Loop";
 			sourceTree = "<group>";
@@ -83,16 +74,6 @@
 				EE43769A22C9FFDA007BE759 /* CoreMIDI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EE76B20F22CA415F0079D3FE /* PGMidi */ = {
-			isa = PBXGroup;
-			children = (
-				EE76B21122CA415F0079D3FE /* PGMidi.h */,
-				EE76B21022CA415F0079D3FE /* PGMidi.mm */,
-				EE406C2E22CA582C00745708 /* PGArc.h */,
-			);
-			path = PGMidi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +110,7 @@
 						CreatedOnToolsVersion = 10.2.1;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -175,7 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE43768A22C9FF24007BE759 /* ViewController.swift in Sources */,
-				EE76B21222CA415F0079D3FE /* PGMidi.mm in Sources */,
 				EE43768822C9FF24007BE759 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Core MIDI Crash Loop/Core MIDI Crash Loop.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UD4B2Y9G;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -333,7 +313,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.multitracks.Core-MIDI-Crash-Loop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Core MIDI Crash Loop/Core-MIDI-Crash-Loop-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -343,7 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Core MIDI Crash Loop/Core MIDI Crash Loop.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UD4B2Y9G;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -354,7 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.multitracks.Core-MIDI-Crash-Loop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Core MIDI Crash Loop/Core-MIDI-Crash-Loop-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
