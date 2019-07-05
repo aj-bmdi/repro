@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Core_MIDI_Crash_Loop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO CRASH!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3A-Ck-AZP">
+                                <rect key="frame" x="97.5" y="429" width="219" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlj-dt-aIB">
+                                <rect key="frame" x="82.5" y="569" width="249" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="6" maxX="8" maxY="6"/>
+                                <state key="normal" title="Does this button highlight?">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="testButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="hHy-qP-PUo"/>
+                                    <action selector="testButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fWU-j0-og3"/>
+                                    <action selector="testButtonTouchUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="FJd-f5-Bd0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go MIDI crazy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJL-P4-t25">
+                                <rect key="frame" x="131" y="485" width="152" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iJL-P4-t25" firstAttribute="top" secondItem="n3A-Ck-AZP" secondAttribute="bottom" constant="8" id="DTw-eR-NoE"/>
+                            <constraint firstItem="n3A-Ck-AZP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JcX-NU-oal"/>
+                            <constraint firstItem="n3A-Ck-AZP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N44-qF-Y2m"/>
+                            <constraint firstItem="nlj-dt-aIB" firstAttribute="top" secondItem="iJL-P4-t25" secondAttribute="bottom" constant="55" id="gae-x0-SIs"/>
+                            <constraint firstItem="iJL-P4-t25" firstAttribute="centerX" secondItem="n3A-Ck-AZP" secondAttribute="centerX" id="oRC-cT-FNB"/>
+                            <constraint firstItem="nlj-dt-aIB" firstAttribute="centerX" secondItem="n3A-Ck-AZP" secondAttribute="centerX" id="vJp-Ss-JFM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="testButton" destination="nlj-dt-aIB" id="dyl-GX-MYg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
